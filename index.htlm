@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développer sa stratégie d'attractivité, de recrutement et de fidélisation - Barakat Conseil</title>
+    <meta name="description" content="Formation professionnelle pour managers, RH et responsables d'établissements en secteur sanitaire, social et médico-social.">
+    <style>
+        /* CSS Variables - Palette Barakat Conseil */
+        :root {
+            --blue-deep: #17324D;
+            --teal: #2F7E7A;
+            --terracotta: #C86E4A;
+            --sand: #F4EFE8;
+            --anthracite: #2C333A;
+            --white: #FFFFFF;
+            --base-spacing: 8px;
+            --max-width: 1120px;
+            --mobile-margin: 20px;
+        }
+
+        /* Reset et base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            color: var(--anthracite);
+            background-color: var(--white);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--teal);
+            outline-offset: 2px;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--mobile-margin);
+        }
+
+        @media (min-width: 769px) {
+            .container {
+                padding: calc(var(--base-spacing) * 8);
+            }
+        }
+
+        /* Header et Navigation */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: calc(var(--base-spacing) * 2) var(--mobile-margin);
+        }
+
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--blue-deep);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo:focus-visible {
+            outline: 3px solid var(--teal);
+            border-radius: 4px;
+        }
+
+        .logo-monogram {
+            width: 40px;
+            height: 40px;
+            background-color: var(--blue-deep);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            border-radius: 8px;
+            position: relative;
+            font-size: 22px;
+        }
+
+        .logo-monogram::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background-color: var(--teal);
+            border-radius: 2px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        @media (min-width: 769px) {
+            nav {
+                display: flex;
+                gap: 24px;
+            }
+
+            nav a {
+                color: var(--anthracite);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            nav a:hover {
+                color: var(--teal);
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--blue-deep);
+            font-size: 24px;
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 96px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--sand) 0%, var(--white) 100%);
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .hero {
+                padding: 128px 64px;
+            }
+        }
+
+        .hero-label {
+            color: var(--terracotta);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 40px;
+            line-height: 1.1;
+            color: var(--blue-deep);
+            margin-bottom: 32px;
+            font-weight: 700;
+        }
+
+        @media (min-width: 769px) {
+            h1 {
+                font-size: 48px;
+            }
+        }
+
+        .hero-tagline {
+            font-size: 18px;
+            color: var(--teal);
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .quick-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 64px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 769px) {
+            .quick-info {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+        }
+
+        .quick-info-item {
+            padding: 24px;
+            background-color: var(--white);
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .quick-info-item strong {
+            display: block;
+            color: var(--blue-deep);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .quick-info-item span {
+            font-size: 13px;
+            color: var(--anthracite);
+            display: block;
+            line-height: 1.4;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            justify-content: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 769px) {
+            .hero-cta {
+                flex-direction: row;
+                gap: 24px;
+            }
+        }
+
+        /* Boutons */
+        button,
+        .btn {
+            font-size: 16px;
+            padding: 24px 32px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary,
+        button.btn-primary {
+            background-color: var(--blue-deep);
+            color: var(--white);
+        }
+
+        .btn-primary:hover,
+        button.btn-primary:hover {
+            background-color: #0f2238;
+        }
+
+        .btn-secondary,
+        button.btn-secondary {
+            background-color: var(--white);
+            color: var(--teal);
+            border: 2px solid var(--teal);
+        }
+
+        .btn-secondary:hover,
+        button.btn-secondary:hover {
+            background-color: var(--sand);
+        }
+
+        /* Sections */
+        section {
+            padding: 96px 20px;
+            margin: 0;
+        }
+
+        @media (min-width: 769px) {
+            section {
+                padding: 96px 64px;
+            }
+        }
+
+        section:nth-child(odd) {
+            background-color: var(--white);
+        }
+
+        section:nth-child(even) {
+            background-color: var(--sand);
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            color: var(--blue-deep);
+            margin-bottom: 32px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 28px;
+            }
+        }
+
+        h3 {
+            font-size: 20px;
+            color: var(--blue-deep);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        /* Purpose Section */
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .purpose-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .purpose-card {
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        section:nth-child(even) .purpose-card {
+            background-color: var(--white);
+        }
+
+        .purpose-card h3 {
+            color: var(--terracotta);
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .purpose-card p {
+            color: var(--anthracite);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Public Section */
+        .public-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .public-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .public-card {
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 12px;
+            border-left: 4px solid var(--teal);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        section:nth-child(even) .public-card {
+            background-color: var(--white);
+        }
+
+        .public-card h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .public-card p {
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .public-note {
+            background-color: var(--white);
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid var(--terracotta);
+            margin-top: 32px;
+        }
+
+        section:nth-child(even) .public-note {
+            background-color: var(--white);
+        }
+
+        .public-note p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        /* Objectives */
+        .objectives-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .objectives-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .objective-item {
+            padding: 24px;
+            background-color: var(--white);
+            border-radius: 8px;
+            border-left: 4px solid var(--teal);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        section:nth-child(even) .objective-item {
+            background-color: var(--white);
+        }
+
+        .objective-item p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Accordion */
+        .accordion {
+            display: grid;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .accordion-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: var(--white);
+            overflow: hidden;
+        }
+
+        section:nth-child(even) .accordion-item {
+            background-color: var(--white);
+        }
+
+        .accordion-header {
+            background-color: var(--blue-deep);
+            color: var(--white);
+            padding: 32px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background-color: #0f2238;
+        }
+
+        .accordion-header::after {
+            content: '+';
+            font-size: 20px;
+        }
+
+        .accordion-header[aria-expanded="true"]::after {
+            content: '−';
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.open {
+            max-height: 1000px;
+        }
+
+        .accordion-body {
+            padding: 32px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .accordion-body h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+
+        .accordion-body ul {
+            margin: 0 0 24px 32px;
+            line-height: 1.8;
+        }
+
+        .accordion-body li {
+            margin-bottom: 8px;
+        }
+
+        /* Themes Grid */
+        .themes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .themes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .themes-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .theme-card {
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--teal);
+        }
+
+        section:nth-child(even) .theme-card {
+            background-color: var(--white);
+        }
+
+        .theme-card h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .theme-card p {
+            font-size: 15px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Pedagogy Section */
+        .pedagogy-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .pedagogy-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .pedagogy-item {
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 8px;
+            border-left: 4px solid var(--terracotta);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        section:nth-child(even) .pedagogy-item {
+            background-color: var(--white);
+        }
+
+        .pedagogy-item h3 {
+            font-size: 18px;
+            color: var(--terracotta);
+            margin-bottom: 16px;
+        }
+
+        .pedagogy-item p {
+            font-size: 15px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Deliverables */
+        .deliverables-list {
+            margin-top: 32px;
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 8px;
+            border-left: 4px solid var(--teal);
+        }
+
+        section:nth-child(even) .deliverables-list {
+            background-color: var(--white);
+        }
+
+        .deliverables-list ul {
+            columns: 1;
+            margin: 0;
+        }
+
+        @media (min-width: 769px) {
+            .deliverables-list ul {
+                columns: 2;
+            }
+        }
+
+        .deliverables-list li {
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .deliverables-note {
+            margin-top: 32px;
+            padding: 24px;
+            background-color: var(--sand);
+            border-radius: 8px;
+            font-style: italic;
+            border-left: 4px solid var(--terracotta);
+            font-size: 15px;
+        }
+
+        section:nth-child(even) .deliverables-note {
+            background-color: #f9f5f0;
+        }
+
+        /* Key Points */
+        .keypoints-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .keypoints-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .keypoint {
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 8px;
+            border-left: 4px solid var(--teal);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        section:nth-child(even) .keypoint {
+            background-color: var(--white);
+        }
+
+        .keypoint p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--anthracite);
+        }
+
+        /* Practical Info */
+        .practical-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .practical-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .practical-item {
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 8px;
+            border-left: 4px solid var(--teal);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        section:nth-child(even) .practical-item {
+            background-color: var(--white);
+        }
+
+        .practical-item h3 {
+            font-size: 18px;
+            color: var(--blue-deep);
+            margin-bottom: 16px;
+        }
+
+        .practical-item p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .practical-item ul {
+            margin: 0;
+            padding-left: 32px;
+        }
+
+        .practical-item li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Download Section */
+        .download-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 769px) {
+            .download-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .download-card {
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        section:nth-child(even) .download-card {
+            background-color: var(--white);
+        }
+
+        .download-card h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .download-card p {
+            font-size: 15px;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        /* Trainer Section */
+        .trainer-bio {
+            max-width: 600px;
+            margin: 32px auto 0;
+            padding: 32px;
+            background-color: var(--white);
+            border-radius: 8px;
+            border-left: 4px solid var(--teal);
+        }
+
+        section:nth-child(even) .trainer-bio {
+            background-color: var(--white);
+        }
+
+        .trainer-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--blue-deep);
+            margin-bottom: 8px;
+        }
+
+        .trainer-role {
+            font-size: 15px;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .trainer-bio p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .trainer-bio p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 32px;
+        }
+
+        .faq-item {
+            margin-bottom: 32px;
+            padding: 24px;
+            background-color: var(--white);
+            border-radius: 8px;
+            border-left: 4px solid var(--teal);
+        }
+
+        section:nth-child(even) .faq-item {
+            background-color: var(--white);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--blue-deep);
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .faq-answer {
+            color: var(--anthracite);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--blue-deep);
+            color: var(--white);
+            padding: 64px 20px;
+        }
+
+        @media (min-width: 769px) {
+            footer {
+                padding: 64px 64px;
+            }
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        @media (min-width: 769px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .footer-section h3 {
+            color: var(--white);
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        .footer-section p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .footer-nav {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width: 769px) {
+            .footer-nav {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .footer-nav a {
+            color: var(--sand);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--white);
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 32px;
+            margin-top: 32px;
+            grid-column: 1 / -1;
+        }
+
+        .footer-accessibility {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--sand);
+        }
+
+        /* Utilitaires */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 32px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Maps Container */
+        .maps-container {
+            background-color: var(--white);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        section:nth-child(even) .maps-container {
+            background-color: var(--white);
+        }
+
+        .maps-container h3 {
+            font-size: 18px;
+            color: var(--blue-deep);
+            margin-bottom: 24px;
+        }
+
+        .maps-container iframe {
+            display: block;
+            max-width: 100%;
+            height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .maps-container iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo" aria-label="Accueil Barakat Conseil">
+                <span class="logo-monogram">BC</span>
+                <span>Barakat Conseil</span>
+            </a>
+            <button class="menu-toggle" aria-label="Afficher la navigation" aria-expanded="false" id="menuToggle">☰</button>
+            <nav id="mainNav" style="display: flex;">
+                <a href="#presentation">Présentation</a>
+                <a href="#objectifs">Objectifs</a>
+                <a href="#parcours">Parcours</a>
+                <a href="#methode">Méthode</a>
+                <a href="#ressources">Ressources</a>
+                <a href="#infos-pratiques">Infos pratiques</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <p class="hero-label">Barakat Conseil</p>
+                <h1>Développer sa stratégie d'attractivité, de recrutement et de fidélisation</h1>
+                <p class="hero-tagline">Comprendre ce qui attire, structurer les pratiques de recrutement et créer les conditions qui donnent envie de rester.</p>
+                
+                <div class="quick-info">
+                    <div class="quick-info-item">
+                        <strong>3 jours</strong>
+                        <span>Parcours complet</span>
+                    </div>
+                    <div class="quick-info-item">
+                        <strong>10, 11, 30 juin</strong>
+                        <span>2026</span>
+                    </div>
+                    <div class="quick-info-item">
+                        <strong>Villelaure</strong>
+                        <span>Vaucluse (84)</span>
+                    </div>
+                    <div class="quick-info-item">
+                        <strong>Formation</strong>
+                        <span>Pour adultes</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#parcours" class="btn btn-primary">Découvrir le programme</a>
+                    <a href="Programme_Formation_Attractivite_Recrutement_Fidelisation.pdf" class="btn btn-secondary" download>Télécharger le programme</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1: À quoi sert cette formation -->
+        <section id="presentation">
+            <div class="container">
+                <h2>À quoi sert cette formation ?</h2>
+                <p>Cette formation aide les professionnels à analyser les tensions de recrutement, structurer une promesse employeur crédible, améliorer l'expérience candidat et l'intégration, puis prioriser des actions de fidélisation adaptées à leur établissement.</p>
+                
+                <div class="purpose-grid">
+                    <div class="purpose-card">
+                        <h3>Comprendre</h3>
+                        <p>Comprendre les facteurs qui influencent l'attractivité, le recrutement et la fidélisation dans votre contexte professionnel.</p>
+                    </div>
+                    <div class="purpose-card">
+                        <h3>Structurer</h3>
+                        <p>Structurer une marque employeur crédible, des pratiques de recrutement lisibles et un parcours d'intégration cohérent.</p>
+                    </div>
+                    <div class="purpose-card">
+                        <h3>Agir</h3>
+                        <p>Transformer les constats en priorités, outils et actions réalistes adaptées à votre établissement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Pour qui -->
+        <section>
+            <div class="container">
+                <h2>Pour qui ?</h2>
+                <p>Cette formation s'adresse à des professionnels impliqués dans l'attractivité, le recrutement et la fidélisation :</p>
+                
+                <div class="public-cards">
+                    <div class="public-card">
+                        <h3>Cadres et managers</h3>
+                        <p>De proximité et de direction impliqués dans les enjeux d'attractivité et de fidélisation.</p>
+                    </div>
+                    <div class="public-card">
+                        <h3>Responsables RH</h3>
+                        <p>Et professionnels du recrutement, de l'intégration et de la gestion des talents.</p>
+                    </div>
+                    <div class="public-card">
+                        <h3>Responsables d'établissement</h3>
+                        <p>Chefs de service et responsables porteurs de la stratégie employeur.</p>
+                    </div>
+                </div>
+
+                <div class="public-note">
+                    <p><strong>Spécificité :</strong> La formation est particulièrement adaptée aux réalités des secteurs sanitaire, social et médico-social.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Objectifs pédagogiques -->
+        <section id="objectifs">
+            <div class="container">
+                <h2>Les objectifs pédagogiques</h2>
+                <p>À l'issue du parcours, vous serez en mesure de :</p>
+                
+                <div class="objectives-list">
+                    <div class="objective-item">
+                        <p><strong>Identifier</strong> les enjeux d'attractivité, de recrutement et de fidélisation.</p>
+                    </div>
+                    <div class="objective-item">
+                        <p><strong>Analyser</strong> les facteurs internes et externes qui influencent l'image et l'expérience employeur.</p>
+                    </div>
+                    <div class="objective-item">
+                        <p><strong>Repérer</strong> les leviers d'engagement, de motivation, de reconnaissance et de rétention.</p>
+                    </div>
+                    <div class="objective-item">
+                        <p><strong>Formuler</strong> une promesse employeur crédible et reliée à des preuves concrètes.</p>
+                    </div>
+                    <div class="objective-item">
+                        <p><strong>Décrire</strong> le processus de recrutement réel et construire un processus cible partagé.</p>
+                    </div>
+                    <div class="objective-item">
+                        <p><strong>Poser</strong> les bases d'un parcours d'intégration structuré.</p>
+                    </div>
+                    <div class="objective-item">
+                        <p><strong>Prioriser</strong> les actions et préparer un plan d'amélioration opérationnel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Three-day journey -->
+        <section id="parcours">
+            <div class="container">
+                <h2>Le parcours des trois jours</h2>
+                <p>Un parcours progressif : <strong>Analyser → Structurer → Agir</strong></p>
+                
+                <div class="accordion">
+                    <!-- Day 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="jour1" id="btn-jour1">
+                            <span><strong>Jour 1</strong> — Comprendre et poser les bases</span>
+                        </button>
+                        <div id="jour1" class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Comprendre les tensions, analyser ce qui attire ou fragilise l'engagement</h3>
+                                <p>Vous analyserez les enjeux contextuels (marché, territoire, métiers, organisation) et poserez les bases d'une marque employeur crédible.</p>
+                                <ul>
+                                    <li><strong>Facteurs contextuels de l'emploi :</strong> Marché, territoire, métiers, organisation, attentes candidats, marges d'action</li>
+                                    <li><strong>Motivation et engagement :</strong> Autonomie, compétence, appartenance, reconnaissance, sens, conditions de travail</li>
+                                    <li><strong>Attractivité et rétention :</strong> Ce qui attire, ce qui fait rester, écarts entre promesse et réalité</li>
+                                    <li><strong>Marque employeur :</strong> Image, promesse, expérience, réputation, preuves</li>
+                                </ul>
+                                <p><em>Productions du jour 1 :</em> Cartographie des tensions, carte des leviers d'engagement, diagnostic attractivité/rétention, première promesse employeur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="jour2" id="btn-jour2">
+                            <span><strong>Jour 2</strong> — Structurer les pratiques et préparer l'intégration</span>
+                        </button>
+                        <div id="jour2" class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Objectiver les attentes, rendre la promesse visible, sécuriser l'expérience candidat</h3>
+                                <p>Vous travaillerez sur la communication employeur, le processus de recrutement réel et le parcours d'intégration.</p>
+                                <ul>
+                                    <li><strong>Attentes actuelles au travail :</strong> Données, repères, prudence sur les étiquettes générationnelles</li>
+                                    <li><strong>Marque employeur :</strong> Attributs crédibles, promesse, preuve, vigilance</li>
+                                    <li><strong>Communication employeur :</strong> Cible, message, preuve, canal, intention</li>
+                                    <li><strong>Processus de recrutement :</strong> Expérience candidat réelle, étapes, acteurs, points de friction</li>
+                                    <li><strong>Parcours d'intégration :</strong> Avant-arrivée, jour J, première semaine, premier mois, 2-3 mois</li>
+                                </ul>
+                                <p><em>Productions du jour 2 :</em> Grille promesse/preuve/vigilance, message employeur, processus cible, parcours d'intégration.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="jour3" id="btn-jour3">
+                            <span><strong>Jour 3</strong> — Transformer les priorités en action</span>
+                        </button>
+                        <div id="jour3" class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Produire des livrables opérationnels et un plan d'action réaliste</h3>
+                                <p>Vous passerez des diagnostics aux actions, en produisant des outils concrets adaptés à votre contexte.</p>
+                                <ul>
+                                    <li><strong>Choisir le chantier :</strong> Priorité à fort impact et réaliste</li>
+                                    <li><strong>Produire ou améliorer un outil :</strong> À partir des besoins réels et supports existants</li>
+                                    <li><strong>Mutualiser :</strong> Partage croisé, retours des pairs, analyse critique</li>
+                                    <li><strong>Planifier :</strong> Responsables, échéances, première étape, indicateurs</li>
+                                    <li><strong>Sécuriser le suivi :</strong> Freins, risques, modalités de vérification</li>
+                                </ul>
+                                <p><em>Productions du jour 3 :</em> Plan d'action opérationnel, livrables formalisés, indicateurs de suivi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Key themes -->
+        <section id="methode">
+            <div class="container">
+                <h2>Les grandes thématiques</h2>
+                <p>Six dimensions travaillées tout au long du parcours :</p>
+                
+                <div class="themes-grid">
+                    <div class="theme-card">
+                        <h3>Attractivité</h3>
+                        <p>Comprendre ce qui donne envie de rejoindre une organisation et les facteurs qui soutiennent cette envie.</p>
+                    </div>
+                    <div class="theme-card">
+                        <h3>Marque et promesse employeur</h3>
+                        <p>Relier le discours, les preuves et la réalité vécue pour construire une promesse crédible.</p>
+                    </div>
+                    <div class="theme-card">
+                        <h3>Expérience candidat</h3>
+                        <p>Analyser les interactions qui construisent l'image employeur, du premier contact à la prise de poste.</p>
+                    </div>
+                    <div class="theme-card">
+                        <h3>Recrutement</h3>
+                        <p>Structurer les étapes, les rôles, les délais et les pratiques pour un processus clair et lisible.</p>
+                    </div>
+                    <div class="theme-card">
+                        <h3>Intégration</h3>
+                        <p>Préparer l'arrivée et sécuriser les premières étapes du parcours professionnel.</p>
+                    </div>
+                    <div class="theme-card">
+                        <h3>Fidélisation</h3>
+                        <p>Identifier ce qui donne envie de rester, de s'impliquer et de progresser dans l'établissement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Pedagogy -->
+        <section>
+            <div class="container">
+                <h2>Une pédagogie active</h2>
+                <p>La formation repose sur la participation active des apprenants, l'analyse du réel et la production de traces utiles pour le transfert.</p>
+                
+                <div class="pedagogy-grid">
+                    <div class="pedagogy-item">
+                        <h3>Partir du réel</h3>
+                        <p>Les participants travaillent à partir de situations professionnelles concrètes et de pratiques existantes.</p>
+                    </div>
+                    <div class="pedagogy-item">
+                        <h3>Analyser</h3>
+                        <p>Les activités permettent de distinguer constats, faits, perceptions, hypothèses et leviers d'action.</p>
+                    </div>
+                    <div class="pedagogy-item">
+                        <h3>Construire</h3>
+                        <p>Les participants produisent des traces et outils réutilisables adaptés à leur établissement.</p>
+                    </div>
+                    <div class="pedagogy-item">
+                        <h3>Partager</h3>
+                        <p>Les échanges entre pairs permettent de confronter les réalités et découvrir des solutions différentes.</p>
+                    </div>
+                    <div class="pedagogy-item">
+                        <h3>Prioriser</h3>
+                        <p>La formation aide à identifier les actions réalistes plutôt que de chercher à tout transformer simultanément.</p>
+                    </div>
+                    <div class="pedagogy-item">
+                        <h3>Transférer</h3>
+                        <p>Chaque production est pensée pour être mise en œuvre rapidement dans le contexte professionnel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Deliverables -->
+        <section>
+            <div class="container">
+                <h2>Ce que les participants vont produire</h2>
+                <p>Au fil des trois jours, vous réaliserez des productions concrètes, outils et livrables opérationnels :</p>
+                
+                <div class="deliverables-list">
+                    <ul>
+                        <li>Cartographie des tensions de recrutement</li>
+                        <li>Carte des leviers d'engagement</li>
+                        <li>Diagnostic attractivité / rétention</li>
+                        <li>Grille promesse / preuve / vigilance</li>
+                        <li>Message employeur</li>
+                        <li>Processus de recrutement cible</li>
+                        <li>Parcours d'intégration structuré</li>
+                        <li>Priorités d'action</li>
+                        <li>Livrables opérationnels adaptés (offre d'emploi, grille d'entretien, livret d'accueil, etc.)</li>
+                    </ul>
+                </div>
+
+                <div class="deliverables-note">
+                    <strong>Important :</strong> Les productions constituent des bases de travail à adapter au contexte de chaque établissement. Ce ne sont pas des solutions universelles, mais des trames à enrichir et contextualiser.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Key references -->
+        <section>
+            <div class="container">
+                <h2>Quelques repères clés</h2>
+                
+                <div class="keypoints-grid">
+                    <div class="keypoint">
+                        <p><strong>Attirer et fidéliser</strong> sont deux dimensions liées. Une organisation peut attirer par une annonce ; elle fidélise par l'expérience réelle du travail.</p>
+                    </div>
+                    <div class="keypoint">
+                        <p><strong>Une promesse employeur</strong> doit pouvoir être prouvée. Elle ne doit pas embellir, mais rendre visible ce qui existe réellement.</p>
+                    </div>
+                    <div class="keypoint">
+                        <p><strong>Le recrutement constitue déjà</strong> une expérience candidat. Chaque interaction construit ou détériore l'image employeur.</p>
+                    </div>
+                    <div class="keypoint">
+                        <p><strong>L'intégration commence</strong> avant le premier jour. La manière dont on accueille un nouveau professionnel confirme ou fragilise la promesse employeur.</p>
+                    </div>
+                    <div class="keypoint">
+                        <p><strong>Fidéliser ne signifie pas</strong> simplement retenir. Il s'agit de créer les conditions d'une expérience professionnelle soutenable, cohérente et porteuse de sens.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Practical info -->
+        <section id="infos-pratiques">
+            <div class="container">
+                <h2>Informations pratiques</h2>
+                
+                <div class="practical-grid">
+                    <div class="practical-item">
+                        <h3>Dates</h3>
+                        <ul>
+                            <li>10 juin 2026</li>
+                            <li>11 juin 2026</li>
+                            <li>30 juin 2026</li>
+                        </ul>
+                    </div>
+                    <div class="practical-item">
+                        <h3>Durée</h3>
+                        <p>3 jours de formation</p>
+                    </div>
+                    <div class="practical-item">
+                        <h3>Lieu</h3>
+                        <p>371 chemin du Mardéric<br>84530 Villelaure</p>
+                    </div>
+                </div>
+
+                <div class="maps-container" style="margin-top: 48px;">
+                    <h3 style="margin-bottom: 24px;">Localisation</h3>
+                    <iframe width="100%" height="400" style="border: 1px solid #e0e0e0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.5263847556897!2d5.218391!3d44.023888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c51c9c8c8c8c8d%3A0x8c8c8c8c8c8c8c8c!2s371%20Chemin%20du%20Mard%C3%A9ric%2C%2084530%20Villelaure!5e0!3m2!1sfr!2sfr!4v1234567890"></iframe>
+                </div>
+
+                <div class="practical-grid mt-4">
+                    <div class="practical-item">
+                        <h3>Format</h3>
+                        <p>Présentiel, sauf adaptation contractuelle spécifique.</p>
+                    </div>
+                    <div class="practical-item">
+                        <h3>Public</h3>
+                        <p>Cadres, managers, responsables RH, chefs de service, responsables d'établissement, professionnels du recrutement et de la fidélisation.</p>
+                    </div>
+                    <div class="practical-item">
+                        <h3>Prérequis</h3>
+                        <p>Connaître son contexte professionnel et pouvoir partager des pratiques de recrutement, d'intégration ou de fidélisation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Resources -->
+        <section id="ressources">
+            <div class="container">
+                <h2>Ressources à télécharger</h2>
+                <p>Accédez aux documents complets pour approfondir votre compréhension :</p>
+                
+                <div class="download-cards">
+                    <div class="download-card">
+                        <h3>📋 Programme de formation</h3>
+                        <p>Retrouvez les objectifs, le parcours détaillé et les modalités de la formation.</p>
+                        <a href="Programme_Formation_Attractivite_Recrutement_Fidelisation.pdf" class="btn btn-primary" download>Télécharger le programme</a>
+                    </div>
+                    <div class="download-card">
+                        <h3>📚 Livret stagiaire</h3>
+                        <p>Retrouvez les repères, outils et ressources pour accompagner votre parcours de formation.</p>
+                        <a href="Livret_stagiaire_Attractivite_Recrutement_Fidelisation.pdf" class="btn btn-primary" download>Télécharger le livret</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Trainer -->
+        <section id="contact">
+            <div class="container text-center">
+                <h2>La formatrice</h2>
+                
+                <div class="trainer-bio">
+                    <div class="trainer-name">Zoulikha Barakat</div>
+                    <div class="trainer-role">Formatrice – Consultante – Coach professionnelle</div>
+                    
+                    <p><strong>Barakat Conseil</strong></p>
+                    <p>Zoulikha Barakat accompagne depuis des années les établissements et équipes de secteur sanitaire, social et médico-social dans leurs transformations. Son approche privilégie l'analyse des pratiques réelles, la participation active et le transfert immédiat vers le terrain.</p>
+                    <p>Formée à l'écoute active, l'analyse institutionnelle et l'ingénierie pédagogique, elle combine rigueur analytique et chaleur humaine pour aider chacun à s'approprier des outils concrets et adaptés à son contexte.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: FAQ -->
+        <section>
+            <div class="container">
+                <h2>Foire aux questions</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">À qui s'adresse cette formation ?</div>
+                        <div class="faq-answer">La formation s'adresse à cadres, managers, responsables RH, chefs de service et responsables d'établissement impliqués dans l'attractivité, le recrutement ou la fidélisation. Elle est particulièrement adaptée aux secteurs sanitaire, social et médico-social.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Faut-il avoir une expérience en ressources humaines ?</div>
+                        <div class="faq-answer">Non. Le prérequis principal est de connaître votre contexte professionnel et de pouvoir partager des pratiques réelles. La formation fonctionne en équipes mixtes, ce qui enrichit les apprentissages.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">La formation est-elle uniquement théorique ?</div>
+                        <div class="faq-answer">Non. La formation repose sur une pédagogie active : études de cas, travaux en sous-groupes, post-it, productions collectives. Vous repartirez avec des outils et livrables concrets.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Vais-je repartir avec des outils ?</div>
+                        <div class="faq-answer">Oui. Vous produirez des outils, matrices et livrables opérationnels (grille promesse/preuve/vigilance, processus de recrutement, parcours d'intégration, etc.) adaptés à votre établissement.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Les situations de mon établissement peuvent-elles être travaillées ?</div>
+                        <div class="faq-answer">Oui. La formation part de situations réelles. Vous apporterez vos cas, vos tensions et vos contextes, qui serviront de matière aux analyses et productions collectives.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Comment les trois journées s'articulent-elles ?</div>
+                        <div class="faq-answer">Jour 1 : Analyser et comprendre. Jour 2 : Structurer les pratiques et préparer l'intégration. Jour 3 : Transformer les priorités en plan d'action opérationnel. Une progression logique de l'analyse à l'action.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Que faire si j'ai besoin d'un aménagement lié à une situation de handicap ?</div>
+                        <div class="faq-answer">Pour tout besoin d'adaptation lié à une situation de handicap, contactez l'organisme de formation afin d'étudier les aménagements possibles.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Barakat Conseil</h3>
+                <p><strong>Zoulikha Barakat</strong><br>Formatrice – Consultante – Coach professionnelle</p>
+                <p>Formation · Conseil · Accompagnement</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <nav class="footer-nav">
+                    <a href="#presentation">Présentation</a>
+                    <a href="#objectifs">Objectifs</a>
+                    <a href="#parcours">Parcours</a>
+                    <a href="#methode">Méthode</a>
+                    <a href="#ressources">Ressources</a>
+                    <a href="#infos-pratiques">Infos pratiques</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <div class="footer-divider">
+                <div class="footer-accessibility">
+                    <p><strong>Accessibilité :</strong> Pour tout besoin d'adaptation lié à une situation de handicap, contactez l'organisme de formation afin d'étudier les aménagements possibles.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Accordion functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                const content = document.getElementById(this.getAttribute('aria-controls'));
+                
+                // Close all other accordions
+                accordionHeaders.forEach(h => {
+                    if (h !== this) {
+                        h.setAttribute('aria-expanded', 'false');
+                        document.getElementById(h.getAttribute('aria-controls')).classList.remove('open');
+                    }
+                });
+                
+                // Toggle current accordion
+                this.setAttribute('aria-expanded', !isExpanded);
+                content.classList.toggle('open');
+            });
+
+            // Allow opening with Enter or Space
+            header.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                mainNav.style.display = isExpanded ? 'none' : 'flex';
+            });
+
+            // Close menu on link click
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        mainNav.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
